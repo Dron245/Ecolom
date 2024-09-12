@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+	@@include('html/_head.htm',{ "title":"HomePage" })
+	<body>
+		<div class="wrapper">
+			@@include('html/_header.htm',{})
+			<main class="page">
+				<section class="page__main main">
+					<div class="main__cont">
+						<div class="main__content">
+							<h1>Приём лома чёрных и цветных металлов <span>в Санкт-Петербурге</span></h1>
+							<div class="main__buttons buttons">
+								<a href="#" type="button" class="buttons__item">Цены на сегодня</a>
+								<a href="#" type="button" class="buttons__item">Как сдать металл</a>
+								<a href="#" type="button" class="buttons__item">Отзывы</a>
+								<a href="#" type="button" class="buttons__item">Акции</a>
+							</div>
+							<button type="button" class="main__link">Оставить заявку</button>
+						</div>
+
+						<div class="main__cirkle">
+							<a data-fancybox href="https://www.youtube.com/watch?v=VLyDWBVSnPc">
+								<img src="@img/main/play.svg" alt="Image" />
+							</a>
+							<svg
+								viewBox="0 0 200 200"
+								width="200"
+								height="200"
+								xmlns="http://www.w3.org/2000/svg"
+								class="link__svg"
+								aria-labelledby="link1-title link1-desc">
+								<path
+									id="link-circle"
+									class="link__path"
+									d="M 20, 100 a 80,80 0 1,1 160,0 a 80,80 0 1,1 -160,0"
+									stroke="none"
+									fill="none" />
+								<text class="link__text">
+									<textPath href="#link-circle" stroke="none">
+										Видео о компании «ЭКОЛОМ» Видео о компании «ЭКОЛОМ»
+									</textPath>
+								</text>
+							</svg>
+						</div>
+						<div class="main__bg">
+							<img src="@img/main/bg.png" alt="Image" />
+						</div>
+					</div>
+				</section>
+			</main>
+			@@include('html/_footer.htm',{})
+		</div>
+		@@include('html/_js.htm',{})
+	</body>
+</html>

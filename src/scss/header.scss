@@ -1,0 +1,163 @@
+.header {
+	&__top {
+		padding-block: 16px;
+		border-bottom: 1px solid #e8e8e8;
+	}
+
+	&__container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__left {
+		display: flex;
+		gap: 42px;
+		align-items: center;
+	}
+
+	&__right {
+		display: flex;
+		gap: 42px;
+		align-items: center;
+	}
+
+	&__logo-wrapper {
+		display: flex;
+		flex-direction: column;
+		column-gap: toRem(10);
+	}
+
+	&__text {
+		font-size: 12px;
+		color: #1f1f1f;
+		opacity: 0.8;
+	}
+	&__logo {
+	}
+
+	&__input-wrapper {
+		position: relative;
+		background: #fff7f3;
+		border-radius: 100px;
+		padding: 11px 28px;
+		display: flex;
+		align-items: center;
+		gap: 12px;
+		max-width: 215px;
+	}
+
+	&__input {
+		font-weight: 600;
+		font-size: 16px;
+		&::placeholder {
+			color: #f95707;
+		}
+	}
+
+	&__button {
+		font-weight: 600;
+		font-size: 16px;
+		text-decoration: underline;
+		text-decoration-skip-ink: none;
+		color: #105720;
+	}
+
+	&__social {
+		display: flex;
+		column-gap: toRem(12);
+	}
+
+	&__social-item {
+		display: grid;
+		place-items: center;
+		border-radius: 50%;
+		background-color: #f3f7f4;
+		width: 30px;
+		height: 30px;
+	}
+
+	&__social-link {
+	}
+
+	&__contacts {
+	}
+
+	&__button-tel {
+		border: 1px solid #f95707;
+		border-radius: 100px;
+		padding: 12px 32px;
+		font-weight: 600;
+		color: #f95707;
+		display: grid;
+		place-items: center;
+	}
+
+	&__bottom {
+		// padding-block: 22px;
+		border-bottom: 1px solid #e8e8e8;
+	}
+
+	&__menu {
+		width: 100%;
+	}
+}
+.input {
+}
+.contacts-header {
+	display: flex;
+	flex-direction: column;
+	row-gap: toRem(5);
+	color: #1f1f1f;
+	margin-right: 42px;
+	&__tel {
+		font-weight: 600;
+	}
+
+	&__email {
+		font-weight: 400;
+		opacity: 0.8;
+	}
+}
+.menu {
+	&__body {
+	}
+
+	&__list {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-wrap: wrap;
+	}
+
+	&__item {
+		padding-block: 22px;
+		position: relative;
+		&::after{
+			content:'';
+			position: absolute;
+			bottom: 0;
+			width: 90%;
+			height: 2px;
+			left: 50%;
+			translate: -50%;
+			background: #f95707;
+			opacity: 0;
+			transition: opacity 0.3s;
+		}
+		&:hover{
+			&::after {
+				opacity: 1;
+			}
+
+		}
+	}
+
+	&__link {
+		text-transform: uppercase;
+		color: #4c4c4c;
+		&:hover{
+			cursor: url(@img/header/cursor.svg), pointer;
+		}
+	}
+}

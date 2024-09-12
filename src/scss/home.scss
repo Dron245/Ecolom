@@ -1,0 +1,138 @@
+//====================================================================================================
+$rotationDuration: 20s;
+$hoverDuration: 0.3s;
+
+$easeIn: cubic-bezier(0.32, 0, 0.67, 0);
+$easeOut: cubic-bezier(0.33, 1, 0.68, 1);
+
+$textColor: #2b2024;
+$bgColor: #dcffca;
+.link__svg {
+	width: 100%;
+	height: auto;
+	transform-box: fill-box;
+	fill: $textColor;
+	stroke: $textColor;
+	stroke-width: 0.05em;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+	width: 200px;
+	height: 200px;
+	display: inline-block;
+	//   text-transform: uppercase;
+	//   letter-spacing: 0.3em;
+	//   word-spacing: 0.3em;
+	font-size: 16px;
+}
+
+.link__arrow {
+	transition: transform calc($hoverDuration / 2) $easeIn;
+	transform-origin: 50% 50%;
+}
+
+.link:hover .link__arrow {
+	transform: scale(1.1);
+	transition: transform var($hoverDuration) $easeOut;
+}
+
+.link__arrow {
+	stroke-width: 0.075em;
+}
+
+.link__text {
+	animation: rotate normal infinite $rotationDuration linear;
+	transform-origin: 50% 50%;
+}
+.link:hover .link__text {
+	animation-play-state: paused;
+}
+
+@keyframes rotate {
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+.page {
+	&__main {
+		@include gridContainer(3);
+	}
+}
+.main {
+	&__cont {
+		display: flex;
+		position: relative;
+		justify-content: space-between;
+	}
+	&__content {
+		max-width: 514px;
+		display: flex;
+		flex-direction: column;
+		margin-top: auto;
+		margin-bottom: auto;
+		h1 {
+			font-weight: 600;
+			font-size: 48px;
+			color: #1f1f1f;
+			line-height: 1.38;
+			margin-bottom: 52px;
+			span {
+				color: #105720;
+			}
+		}
+	}
+
+	&__buttons {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 12px;
+	}
+
+	&__link {
+		display: inline-block;
+		margin-right: auto;
+		border-radius: 100px;
+padding: 15px 32px;
+background: #f95707;
+font-weight: 600;
+color: #fff;
+	}
+
+	&__bg {
+	}
+
+	&__cirkle {
+		position: absolute;
+		top: 5%;
+		left: 35%;
+		a {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+	}
+}
+.buttons {
+	margin-bottom: 72px;
+	&__item {
+		border: 1px solid #f95707;
+border-radius: 100px;
+padding: 13px 32px;
+font-weight: 600;
+color: #f95707;
+	}
+}
+.link {
+
+	&__svg {
+	}
+
+	&__path {
+	}
+
+	&__text {
+	}
+}
+
+//====================================================================================================
