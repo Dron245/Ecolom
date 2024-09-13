@@ -7,6 +7,7 @@ $easeOut: cubic-bezier(0.33, 1, 0.68, 1);
 
 $textColor: #2b2024;
 $bgColor: #dcffca;
+
 .link__svg {
 	width: 100%;
 	height: auto;
@@ -19,9 +20,6 @@ $bgColor: #dcffca;
 	width: 200px;
 	height: 200px;
 	display: inline-block;
-	//   text-transform: uppercase;
-	//   letter-spacing: 0.3em;
-	//   word-spacing: 0.3em;
 	font-size: 16px;
 }
 
@@ -43,6 +41,7 @@ $bgColor: #dcffca;
 	animation: rotate normal infinite $rotationDuration linear;
 	transform-origin: 50% 50%;
 }
+
 .link:hover .link__text {
 	animation-play-state: paused;
 }
@@ -58,24 +57,28 @@ $bgColor: #dcffca;
 		@include gridContainer(3);
 	}
 }
+
 .main {
 	&__cont {
 		display: flex;
 		position: relative;
 		justify-content: space-between;
 	}
+
 	&__content {
 		max-width: 514px;
 		display: flex;
 		flex-direction: column;
 		margin-top: auto;
 		margin-bottom: auto;
+
 		h1 {
 			font-weight: 600;
 			font-size: 48px;
 			color: #1f1f1f;
 			line-height: 1.38;
 			margin-bottom: 52px;
+
 			span {
 				color: #105720;
 			}
@@ -92,19 +95,19 @@ $bgColor: #dcffca;
 		display: inline-block;
 		margin-right: auto;
 		border-radius: 100px;
-padding: 15px 32px;
-background: #f95707;
-font-weight: 600;
-color: #fff;
+		padding: 15px 32px;
+		background: #f95707;
+		font-weight: 600;
+		color: #fff;
 	}
 
-	&__bg {
-	}
+	&__bg {}
 
 	&__cirkle {
 		position: absolute;
 		top: 5%;
 		left: 35%;
+
 		a {
 			position: absolute;
 			top: 50%;
@@ -113,26 +116,125 @@ color: #fff;
 		}
 	}
 }
+
 .buttons {
 	margin-bottom: 72px;
+
 	&__item {
 		border: 1px solid #f95707;
-border-radius: 100px;
-padding: 13px 32px;
-font-weight: 600;
-color: #f95707;
+		border-radius: 100px;
+		padding: 13px 32px;
+		font-weight: 600;
+		color: #f95707;
 	}
 }
+
 .link {
 
-	&__svg {
-	}
+	&__svg {}
 
-	&__path {
-	}
+	&__path {}
 
-	&__text {
-	}
+	&__text {}
 }
 
 //====================================================================================================
+
+.page {
+
+	&__advantages {
+		margin-top: 62px;
+		color: #1f1f1f;
+
+	}
+}
+
+.advantages {
+
+	&__container {}
+
+	&__list {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		gap: 24px;
+	}
+
+	&__item {
+		flex: 0 0 32.098765%;
+		/* 416/1296 */
+		border: 1px solid #e8e8e8;
+		border-radius: 12px;
+		padding: 20px 30px 24px 30px;
+	}
+}
+
+.advantage {
+
+	&__top {
+		display: flex;
+		align-items: center;
+		gap: 12px;
+		margin-bottom: 12px;
+	}
+
+	&__img {
+		width: 52px;
+		height: 52px;
+		border-radius: 50%;
+		background-color: #105720;
+		display: grid;
+		place-items: center;
+	}
+
+	&__title {
+		font-weight: 600;
+		font-size: 20px;
+	}
+
+	&__text {
+		line-height: 1.2;
+	}
+}
+
+//========================================================================================================================================================
+
+.page {
+
+	&__service {
+		margin-top: 100px;
+		color: #1f1f1f;
+	}
+}
+
+.service {
+
+	&__container {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		padding-block: 42px;
+		border-top: 2px solid #f95707;
+		border-bottom: 2px solid #f95707;
+	}
+
+	&__title {
+		font-weight: 600;
+		font-size: 42px;
+		max-width: toRem(300);
+		line-height: 1.2;
+	}
+
+	&__content {
+		flex: 0 0 57.561728%;
+		/* 746/1296 */
+	}
+
+	&__text {
+		line-height: 1.33;
+
+		&:not(:last-child) {
+			margin-bottom: toRem(32);
+		}
+	}
+}
